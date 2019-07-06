@@ -1,0 +1,17 @@
+.btn {
+    color: #ffffff !important;
+}
+
+.btn-red {
+    background: #e8444a;
+    color: #ffffff;
+    display: inline-block;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    transition-duration: .3s;
+
+    &:hover {
+        background: #d03d42;
+        transition-duration: .3s;
+    }
+}

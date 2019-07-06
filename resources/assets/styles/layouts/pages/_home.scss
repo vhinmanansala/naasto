@@ -1,0 +1,95 @@
+#banner-container {
+    background-position: center !important;
+    background-repeat: none !important;
+    background-size: cover !important;
+    padding: 350px 0;
+    text-align: center;
+
+    h1 {
+        font-family: 'Mrs Saint Delafield', cursive;
+        font-size: 200px;
+        color: #ffffff;
+        margin-bottom: -90px;
+    }
+
+    p {
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .btn {
+        margin-top: 60px;
+    }
+}
+
+#how-it-works-container {
+    background: #f2f2f2;
+    padding: $section-padding;
+
+    #how-it-works {
+        margin: 80px 0;
+    }
+
+    .icon {
+        background: #f9b825;
+        border-radius: 100%;
+        height: 80px;
+        line-height: 4.5;
+        margin: 0 auto -40px;
+        position: relative;
+        width: 80px;
+        z-index: 9;
+    }
+
+    .how-it-works-content {
+        background: #ffffff;
+        padding: 60px 30px 30px;
+    }
+}
+
+#menu-container {
+    padding: $section-padding;
+
+    #menu-list-container {
+        margin: 80px 0;
+
+        .product {
+            margin-bottom: 30px;
+            transition-duration: .3s;
+
+            h5 {
+                margin-bottom: 5px;
+            }
+
+            span {
+                color: #e8444a;
+                font-weight: bold;
+            }
+
+            p {
+                margin-top: 15px;
+            }
+
+            &:hover {
+                box-shadow: none;
+                transition-duration: .3s;
+            }
+        }
+    }
+}
+
+#about-container {
+    padding: 350px 0;
+
+    h2, p {
+        color: #ffffff;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+}

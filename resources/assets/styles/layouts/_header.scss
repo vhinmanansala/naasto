@@ -1,0 +1,26 @@
+#header-container {
+    background: #1d486b;
+    box-shadow: 0 0 30px rgba(7,51,84,0.17);
+    padding: 15px 0;
+    position: relative;
+
+    ul#menu-main-menu {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        position: relative;
+
+        li {
+            display: inline-block;
+
+            &:last-child a {
+                padding-right: 0;
+            }
+
+            a {
+                display: block;
+                padding: 0 15px;
+            }
+        }
+    }
+}
