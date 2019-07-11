@@ -100,3 +100,14 @@ if (function_exists('acf_add_options_page')) {
         'redirect'      => false
     ));
 }
+
+require_once('inc/bfi-thumb.php');
+
+function trunc($phrase, $max_words) {
+    $phrase = strip_shortcodes($phrase);
+    $phrase = strip_tags($phrase);
+    $phrase_array = explode(' ',$phrase);
+    if(count($phrase_array) > $max_words && $max_words > 0)
+      $phrase = implode(' ',array_slice($phrase_array, 0, $max_words));
+    return $phrase;
+}

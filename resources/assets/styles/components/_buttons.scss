@@ -1,12 +1,14 @@
 .btn {
     color: #ffffff !important;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-red {
     background: #e8444a;
     color: #ffffff;
     display: inline-block;
-    padding: 20px 35px;
+    padding: 15px 35px;
     text-transform: uppercase;
     transition-duration: .3s;
 

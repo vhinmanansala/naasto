@@ -7,9 +7,15 @@ body {
     font-family: 'Open Sans', sans-serif !important;
     font-size: 16px;
 
-    p, li, span, label, input, a, textarea, .button, table {
+    p, li, span, label, input, a, textarea, .button, table, input {
         color: #7e7e7e;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Open Sans', sans-serif !important;
+        transition-duration: .3s;
+    }
+
+    a:hover {
+        color: #000000;
+        transition-duration: .3s;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -30,5 +36,86 @@ body {
 
     div.wrap {
         background: #ffffff;
+    }
+
+    .page-container {
+        padding: $section-padding;
+    }
+
+    ul.contact {
+        list-style: none;
+
+        li {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            position: relative;
+
+            &:before {
+                color: #f9b825;
+                content: "\f14a";
+                font-family: 'Font Awesome 5 Pro';
+                font-size: 24px;
+                left: -25px;
+                position: absolute;
+                top: -5px;
+            }
+
+            h6 {
+                margin-bottom: 15px;
+            }
+        }
+
+        li.address:before {
+            content: '\f3c5';
+        }
+
+        li.phone:before {
+            content: '\f095';
+        }
+
+        li.email:before {
+            content: '\f0e0';
+        }
+    }
+
+    ul.checklist {
+        li {
+            list-style: none;
+            padding-left: 50px !important;
+            position: relative;
+
+            &:before {
+                color: #f9b825;
+                content: "\f14a";
+                font-family: 'FontAwesome';
+                font-size: 24px;
+                left: 15px;
+                position: absolute;
+                top: -5px;
+            }
+        }
+    }
+
+    input[type='text'], textarea {
+        border: 1px solid #e1e3e5;
+        box-shadow: none;
+        padding: 25px;
+
+        &:focus {
+            border: 1px solid #e1e3e5;
+            box-shadow: none;
+        }
+    }
+
+    ::-webkit-input-placeholder { 
+      color: #7e7e7e;
+    }
+
+    :-ms-input-placeholder { 
+      color: #7e7e7e;
+    }
+
+    ::placeholder {
+      color: #7e7e7e;
     }
 }

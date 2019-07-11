@@ -45,4 +45,19 @@ class App extends Controller
     {
         return get_field('social_medias', 'option');
     }
+
+    public function address()
+    {
+        return get_field('address', 'option');
+    }
+
+    public function phone()
+    {
+        return get_field('phone', 'option');
+    }
+
+    public function email()
+    {
+        return get_field('email', 'option');
+    }
 }
