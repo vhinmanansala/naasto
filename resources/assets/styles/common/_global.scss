@@ -119,3 +119,29 @@ body {
       color: #7e7e7e;
     }
 }
+
+#menu-container {
+    padding: $section-padding;
+
+    #menu-list-container {
+        margin: 80px 0;
+
+        .product {
+            margin-bottom: 30px;
+            transition-duration: .3s;
+
+            h5 {
+                margin-bottom: 5px;
+            }
+
+            span {
+                color: #e8444a;
+                font-weight: bold;
+            }
+
+            p {
+                margin-top: 15px;
+            }
+        }
+    }
+}

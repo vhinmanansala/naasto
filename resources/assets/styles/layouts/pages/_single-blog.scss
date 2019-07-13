@@ -1,0 +1,56 @@
+body.single .blog-post-container {
+    background: #ffffff;
+    box-shadow: 0 0 30px rgba(7, 51, 84, 0.17);
+
+    .blog-post-content-container {
+        padding: 60px;
+
+        h2 {
+            margin: 0;
+        }
+
+        .meta {
+            margin-bottom: 30px;
+
+            span {
+                color: #f9b825;
+            }
+        }
+    }
+}
+
+.sidebar-container {
+    background: #ffffff;
+    box-shadow: 0 0 30px rgba(7, 51, 84, 0.17);
+    padding: 30px;
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .widget {
+        margin-bottom: 30px;
+
+        &:after {
+            background: url('../images/separator.png') repeat-x scroll transparent;
+            content: '';
+            display: block;
+            height: 10px;
+            margin: 60px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .rpwwt-post-date {
+        color: #f9b825;
+    }
+}
