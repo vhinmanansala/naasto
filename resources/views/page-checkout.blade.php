@@ -1,5 +1,5 @@
 {{--
-    Template Name: Cart Template
+    Template Name: Checkout Template
 --}}
 
 @extends('layouts.app')

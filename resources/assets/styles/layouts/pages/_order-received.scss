@@ -1,0 +1,27 @@
+body.woocommerce-order-received {
+    .woocommerce-order-details {
+        h2.woocommerce-order-details__title {
+            font-size: 20px;
+        }
+
+        tfoot, thead {
+            background: #f8f8f8;
+        }
+
+        tbody {
+            background: #fdfbfb;
+        }
+    }
+
+    .woocommerce-customer-details {
+        h2.woocommerce-column__title {
+            font-size: 20px;
+        }
+
+        address {
+            border-radius: 0px;
+            border-width: 1px;
+            padding: 20px;
+        }
+    }
+}

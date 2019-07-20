@@ -4,16 +4,49 @@
     cursor: pointer;
 }
 
-.btn-red {
-    background: #e8444a;
+.btn-red, .checkout-button.button.alt, #place_order {
+    background: #e8444a !important;
     color: #ffffff;
     display: inline-block;
+    font-weight: normal !important;
     padding: 15px 35px;
     text-transform: uppercase;
     transition-duration: .3s;
 
     &:hover {
-        background: #d03d42;
+        background: #d03d42 !important;
         transition-duration: .3s;
+    }
+}
+
+.actions .button {
+    padding: 15px 35px !important;
+}
+
+.wc-forward,
+.actions .button {
+    background: #000000 !important;
+    border-radius: 0px !important;
+    color: #ffffff !important;
+    font-weight: normal !important;
+
+    &:hover {
+        background: #333333 !important;
+    }
+}
+
+.single_add_to_cart_button {
+    background: #e8444a !important;
+    border-radius: 0px !important;
+    color: #ffffff !important;
+    display: inline-block !important;
+    font-weight: normal !important;
+    padding: 15px 35px !important;
+    text-transform: uppercase !important;
+    transition-duration: .3s !important;
+
+    &:hover {
+        background: #d03d42 !important;
+        transition-duration: .3s !important;
     }
 }

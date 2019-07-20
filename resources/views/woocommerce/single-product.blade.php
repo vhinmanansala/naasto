@@ -18,11 +18,11 @@
 
             <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
                 <div class="grid-x grid-padding-x">
-                    <div class="cell large-7 medium-7">
+                    <div class="cell large-6 medium-6">
                         @php(do_action('woocommerce_before_single_product_summary'))
                     </div>
 
-                    <div class="cell medium-5 large-5">
+                    <div class="cell medium-5 large-5 medium-offset-1 large-offset-1">
                         @php(do_action('woocommerce_single_product_summary'))
                     </div>
                 </div>

@@ -118,6 +118,87 @@ body {
     ::placeholder {
       color: #7e7e7e;
     }
+
+    .woocommerce-message,
+    .woocommerce-info {
+        background: url('../images/separator.png') bottom repeat-x scroll transparent;
+        border: none;
+        padding-bottom: 40px;
+    }
+
+    .woocommerce-product-gallery {
+        float: none !important;
+        width: 100% !important;
+    }
+
+    [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+        height: 2.9rem !important;
+    }
+
+    .woocommerce table.shop_table {
+        border: none !important;
+        border-collapse: collapse;
+
+        thead {
+            background: #f8f8f8;
+            border: none;
+
+            th, td {
+                padding: 20px;
+            }
+        }
+
+        tbody {
+            border: none;
+
+            td {
+                border: none;
+                padding: 20px;
+            }
+        }
+
+        tfoot {
+            border: none;
+            
+            th, td {
+                border: none;
+                padding: 20px;
+            }
+        }
+
+        td.actions {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        #coupon_code {
+            background: #f2f2f2;
+            border: none;
+            width: 180px;
+        }
+    }
+
+    .cart-collaterals .cart_totals {
+        h2 {
+            font-size: 22px;
+        }
+
+        .shop_table.shop_table_responsive {
+            td, th {
+                border: none;
+                padding: 20px 10px;
+            }
+
+            th {
+                color: #000000;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 #menu-container {
