@@ -2,7 +2,7 @@
 <html {!! get_language_attributes() !!}>
     @include('partials.head')
     <body @php body_class() @endphp>
-        @php do_action('get_header') @endphp
+        @php do_action('get_header', 'shop') @endphp
         @include('partials.header')
 
         <div class="wrap container" role="document">
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        @php do_action('get_footer') @endphp
+        @php do_action('get_footer', 'shop') @endphp
             @include('partials.footer')
         @php wp_footer() @endphp
     </body>

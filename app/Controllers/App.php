@@ -60,4 +60,18 @@ class App extends Controller
     {
         return get_field('email', 'option');
     }
+
+    public function products()
+    {
+        $args = array('post_type' => 'product', 'posts_per_page' => -1);
+        return new \WP_Query($args);
+    }
+
+    public function product_categories()
+    {
+        return get_terms([
+            'taxonomy' => 'product_cat',
+            'hide_empty' => false,
+        ]);
+    }
 }
