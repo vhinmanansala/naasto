@@ -123,3 +123,14 @@ function woo_remove_product_tabs( $tabs ) {
     return $tabs;
 
 }
+
+add_filter('woocommerce_login_redirect', 'login_redirect');
+function login_redirect($redirect_to) {
+    return home_url();
+}
+
+add_action('wp_logout','logout_redirect');
+function logout_redirect() {
+    wp_redirect( home_url() );
+    exit;
+}
