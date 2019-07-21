@@ -6,6 +6,7 @@
 
 .btn-red, .checkout-button.button.alt, #place_order {
     background: #e8444a !important;
+    border-radius: 0px !important;
     color: #ffffff;
     display: inline-block;
     font-weight: normal !important;
@@ -24,14 +25,20 @@
 }
 
 .wc-forward,
-.actions .button {
+.actions .button,
+.lrm-form button.full-width.has-padding,
+body.woocommerce-edit-address button[type='submit'],
+.btn-black {
     background: #000000 !important;
     border-radius: 0px !important;
     color: #ffffff !important;
     font-weight: normal !important;
+    padding: 15px 35px !important;
+    transition-duration: .3s;
 
     &:hover {
         background: #333333 !important;
+        transition-duration: .3s;
     }
 }
 

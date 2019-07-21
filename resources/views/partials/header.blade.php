@@ -1,3 +1,25 @@
+<div id="secondary-menu-container">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-12 text-right">
+                <ul class="clearfix">
+                    <li>
+                        <a href="{{ get_permalink(136) }}">Cart</a>
+                    </li>
+
+                    <li>
+                        @if (! is_user_logged_in())
+                           <a href="#" class="lrm-login lrm-hide-if-logged-in">Account</a>
+                        @else
+                            <a href="{{ get_permalink(154) }}">Account</a>
+                        @endif
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="header-container">
     <div class="grid-container">
         <div class="grid-x grid-padding-x align-middle">
