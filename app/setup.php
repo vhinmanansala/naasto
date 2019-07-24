@@ -15,7 +15,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Open+Sans&display=swap', false, null);
-    wp_enqueue_style('fontawesome', 'https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Open+Sans&display=swap', false, null);
+    wp_enqueue_style('fontawesome', 'https://pro.fontawesome.com/releases/v5.9.0/css/all.css', [], null);
     
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
