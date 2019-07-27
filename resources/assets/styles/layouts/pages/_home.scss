@@ -30,6 +30,12 @@
         margin: 80px 0;
     }
 
+    @include breakpoint(medium only) {
+        .cell {
+            margin-bottom: 40px;
+        }
+    }
+
     .icon {
         background: #f9b825;
         border-radius: 100%;

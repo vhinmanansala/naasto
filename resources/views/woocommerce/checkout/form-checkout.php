@@ -32,7 +32,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
     
     <div class="grid-x grid-padding-x">
-        <div class="cell medium-5 large-5">
+        <div class="cell medium-7 large-5">
             <?php if ( $checkout->get_checkout_fields() ) : ?>
                 <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
@@ -48,7 +48,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
             <?php endif; ?>
         </div>
 
-        <div class="cell medium-5 large-5 medium-offset-2 large-offset-2">
+        <div class="cell medium-5 large-5  large-offset-2">
             <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
     
             <h5 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h5>

@@ -9,5 +9,11 @@ body.page-about {
                 margin-bottom: 15px;
             }
         }
+
+        @include breakpoint(medium only) {
+            .cell {
+                margin-bottom: 40px;
+            }
+        }
     }
 }

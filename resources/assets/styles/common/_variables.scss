@@ -8,3 +8,11 @@ $foundation-palette: (
 );
 
 $section-padding: 120px 0;
+
+$breakpoints: (
+    small: 0px,
+    medium: 640px,
+    large: 1025px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);

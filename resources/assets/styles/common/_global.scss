@@ -2,6 +2,12 @@
     justify-content: center;
 }
 
+@include breakpoint(portrait medium only) {
+    .woocommerce-MyAccount-navigation {
+        margin-bottom: 80px;
+    }
+}
+
 body {
     background: #171a1c;
     font-family: 'Open Sans', sans-serif !important;

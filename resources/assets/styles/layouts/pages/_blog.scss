@@ -3,6 +3,17 @@ body.page-blog, body.blog {
         background: #ffffff;
         box-shadow: 0 0 30px rgba(7, 51, 84, 0.17);
         margin-bottom: 60px;
+
+        @include breakpoint(portrait medium only) {
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .cell {
+                width: 100%;
+            }
+        }
         
         .blog-post-content {
             padding: 60px;

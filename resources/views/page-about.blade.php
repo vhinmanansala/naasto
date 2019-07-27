@@ -24,7 +24,7 @@
                         </div>
                     </div>
 
-                    <ul class="checklist grid-x grid-padding-x medium-up-4 large-up-4">
+                    <ul class="checklist grid-x grid-padding-x medium-up-2 large-up-4">
                         @foreach ($why_choose_us as $why)
                             <li class="cell">
                                 <h6>{{ $why['title'] }}</h6>

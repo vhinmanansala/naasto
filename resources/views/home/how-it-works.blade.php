@@ -4,7 +4,7 @@
             <div class="cell large-12 text-center">
                 <h2>{{ $how_it_works_heading }}</h2>
 
-                <div id="how-it-works" class="grid-x grid-padding-x medium-up-4 large-up-4 medium-centered large-centered">
+                <div id="how-it-works" class="grid-x grid-padding-x medium-up-2 large-up-4 medium-centered large-centered">
                     @foreach ($how_it_works_contents as $content)
                         <div class="cell">
                             <div class="how-it-works">
