@@ -2,4 +2,14 @@ body.page-contact {
     .wpcf7-form {
         margin-top: 40px;
     }
+
+    textarea {
+        height: 300px !important;
+    }
+
+    @include breakpoint(small only) {
+        #main-content-container {
+            margin-bottom: 30px;
+        }
+    }
 }

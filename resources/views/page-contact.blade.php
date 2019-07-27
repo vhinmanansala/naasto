@@ -9,12 +9,12 @@
         <div id="contact-page-container" class="page-container">
             <div class="grid-container">
                 <div class="grid-x grid-padding-x">
-                    <div class="cell medium-7 large 7">
+                    <div id="main-content-container" class="cell medium-7 large 7">
                         @include('partials.page-header')
                         @php(the_content())
                     </div>
 
-                    <div class="cell medium-4 large-4 medium-offset-1 large-offset-1">
+                    <div id="sidebar-container" class="cell medium-4 large-4 medium-offset-1 large-offset-1">
                         @if ($address || $phone || $email)
                             <ul class="contact">
                                 @if ($address)

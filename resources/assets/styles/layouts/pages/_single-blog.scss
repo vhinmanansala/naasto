@@ -1,3 +1,11 @@
+body.single-post .page-container {
+    @include breakpoint(portrait medium only) {
+        .cell {
+            width: 100%;
+        }
+    }
+}
+
 body.single .blog-post-container {
     background: #ffffff;
     box-shadow: 0 0 30px rgba(7, 51, 84, 0.17);

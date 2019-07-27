@@ -10,7 +10,7 @@ body.page-about {
             }
         }
 
-        @include breakpoint(medium only) {
+        @include breakpoint(small medium only) {
             .cell {
                 margin-bottom: 40px;
             }
