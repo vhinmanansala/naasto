@@ -29,6 +29,39 @@
             </div>
 
             @php(do_action('woocommerce_after_single_product'))
+
+            <?php 
+                $product = new WC_Product(get_the_ID());
+                $upsells = $product->get_upsells();
+            ?>
+
+            @if ($enable_related_products === true)
+                <div id="related-products-container">
+                    <div class="text-center">
+                        <h4>You may also like</h4>
+                    </div>
+
+                    <div class="grid-x grid-padding-x medium-up-3 large-up-3">
+                        @foreach ($upsells as $upsell)
+                            @php($product = wc_get_product($upsell))
+
+                            <div class="cell product">
+                                <a href="{{ get_permalink($upsell) }}">
+                                    {!! $product->get_image() !!}
+                                </a>
+
+                                <h5>
+                                    <a href="{{ get_permalink($upsell) }}">
+                                        {{ $product->get_name() }}
+                                    </a>
+                                </h5>
+
+                                {!! wc_price($product->get_price()) !!}
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
         </div>
     @endwhile
 @endsection

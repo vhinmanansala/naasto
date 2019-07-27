@@ -41,6 +41,11 @@ class App extends Controller
         return get_field('logo', 'options');
     }
 
+    public function enable_related_products()
+    {
+        return get_field('enable_related_products', 'options');
+    }
+
     public function social_medias()
     {
         return get_field('social_medias', 'option');
