@@ -3,7 +3,7 @@
         <div class="grid-x grid-padding-x">
             <div class="cell large-12 text-right">
                 <ul class="clearfix">
-                    <li>test test</li>
+                    <li>test test test</li>
                     <li>
                         <a href="{{ get_permalink(136) }}">Cart</a>
                     </li>
