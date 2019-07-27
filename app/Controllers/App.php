@@ -46,6 +46,16 @@ class App extends Controller
         return get_field('enable_related_products', 'options');
     }
 
+    public function newsletter_shortcode()
+    {
+        return get_field('newsletter_shortcode', 'options');
+    }
+
+    public function enable_newsletter()
+    {
+        return get_field('enable_newsletter', 'options');
+    }
+
     public function social_medias()
     {
         return get_field('social_medias', 'option');

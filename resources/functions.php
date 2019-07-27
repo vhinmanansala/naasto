@@ -135,13 +135,13 @@ function logout_redirect() {
     exit;
 }
 
-// function mailtrap($phpmailer) {
-//   $phpmailer->isSMTP();
-//   $phpmailer->Host = 'smtp.mailtrap.io';
-//   $phpmailer->SMTPAuth = true;
-//   $phpmailer->Port = 2525;
-//   $phpmailer->Username = '13d68fd65b1f71';
-//   $phpmailer->Password = 'd512cb2b291aa4';
-// }
+function mailtrap($phpmailer) {
+  $phpmailer->isSMTP();
+  $phpmailer->Host = 'smtp.mailtrap.io';
+  $phpmailer->SMTPAuth = true;
+  $phpmailer->Port = 2525;
+  $phpmailer->Username = '13d68fd65b1f71';
+  $phpmailer->Password = 'd512cb2b291aa4';
+}
 
-// add_action('phpmailer_init', 'mailtrap');
+add_action('phpmailer_init', 'mailtrap');

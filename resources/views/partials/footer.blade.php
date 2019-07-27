@@ -30,6 +30,14 @@
                     </li>
                 @endforeach
             </ul>
+
+            @if ($enable_newsletter === true)
+                <div class="grid-x grid-padding-x justified-center" id="newsletter-container">
+                    <div class="cell medium-4 large-4">
+                        <?php echo do_shortcode($newsletter_shortcode); ?>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 </footer>

@@ -4,6 +4,19 @@
     cursor: pointer;
 }
 
+.btn-bordered-dark {
+    background: none;
+    border: 1px solid #ffffff;
+    padding: 15px 35px;
+    transition-duration: .3s;
+
+    &:hover {
+        background: #e8444a;
+        border-color: #e8444a;
+        transition-duration: .3s;;
+    }
+}
+
 .btn-red, .checkout-button.button.alt, #place_order {
     background: #e8444a !important;
     border-radius: 0px !important;

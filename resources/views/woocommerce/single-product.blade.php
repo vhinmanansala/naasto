@@ -36,31 +36,33 @@
             ?>
 
             @if ($enable_related_products === true)
-                <div id="related-products-container">
-                    <div class="text-center">
-                        <h4>You may also like</h4>
-                    </div>
+                @if ($upsells)
+                    <div id="related-products-container">
+                        <div class="text-center">
+                            <h4>You may also like</h4>
+                        </div>
 
-                    <div class="grid-x grid-padding-x medium-up-3 large-up-3">
-                        @foreach ($upsells as $upsell)
-                            @php($product = wc_get_product($upsell))
+                        <div class="grid-x grid-padding-x medium-up-3 large-up-3">
+                            @foreach ($upsells as $upsell)
+                                @php($product = wc_get_product($upsell))
 
-                            <div class="cell product">
-                                <a href="{{ get_permalink($upsell) }}">
-                                    {!! $product->get_image() !!}
-                                </a>
-
-                                <h5>
+                                <div class="cell product">
                                     <a href="{{ get_permalink($upsell) }}">
-                                        {{ $product->get_name() }}
+                                        {!! $product->get_image() !!}
                                     </a>
-                                </h5>
 
-                                {!! wc_price($product->get_price()) !!}
-                            </div>
-                        @endforeach
+                                    <h5>
+                                        <a href="{{ get_permalink($upsell) }}">
+                                            {{ $product->get_name() }}
+                                        </a>
+                                    </h5>
+
+                                    {!! wc_price($product->get_price()) !!}
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
-                </div>
+                @endif
             @endif
         </div>
     @endwhile
