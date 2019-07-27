@@ -278,6 +278,15 @@ body {
 #menu-container {
     padding: $section-padding;
 
+    @include breakpoint(small only) {
+        text-align: center;
+
+        img {
+            display: block;
+            margin: 0 auto 40px;
+        }
+    }
+
     #menu-list-container {
         margin: 80px 0;
 

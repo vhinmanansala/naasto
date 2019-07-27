@@ -4,4 +4,25 @@ body.page-cart {
             background: none;
         }
     }
+
+    @include breakpoint(portrait small medium) {
+        input[type='number'] {
+            float: right;
+        }
+    }
+}
+
+@include breakpoint(portrait small) {
+    .woocommerce ul.order_details  {
+        li {
+            float: none;
+            border-bottom: 1px dashed #d3ced2;
+            border-right: none;
+            padding: 15px 0;
+        }
+    }
+
+    address {
+        margin-bottom: 40px !important;
+    }
 }

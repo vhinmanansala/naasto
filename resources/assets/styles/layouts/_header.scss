@@ -36,6 +36,10 @@
     padding: 15px 0;
     position: relative;
 
+    i.fal {
+        font-size: 30px;
+    }
+
     ul#menu-main-menu {
         display: inline-block;
         list-style: none;
@@ -52,6 +56,33 @@
             a {
                 display: block;
                 padding: 0 15px;
+            }
+        }
+    }
+}
+
+@include breakpoint(small down) {
+    #mobile-menu-container {
+        background: #171a1c;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        transition: max-height 5s;
+        width: 80%;
+        z-index: 9999;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 30px 60px;
+
+            a {
+                color: #ffffff;
+                border-bottom: 1px solid rgba(255, 255, 255, .1);
+                display: block;
+                padding: 15px 0;
             }
         }
     }
