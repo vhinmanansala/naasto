@@ -1,0 +1,10 @@
+#!/bin/sh
+ 
+ssh root@157.230.98.3 <<EOF
+  cd /var/www/naasto/public/wp-content/themes/naasto
+  git pull origin master
+  composer install
+  yarn install
+  yarn build:production
+  exit
+EOF
