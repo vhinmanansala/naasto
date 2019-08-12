@@ -30,6 +30,18 @@
                                     
                                     {!! wc_price($_product->get_price()) !!}
 
+                                    @if ($_product->manage_stock)
+                                        @if ($_product->stock_quantity > 0)
+                                            <p class="stock in-stock">
+                                                {{ $_product->stock_quantity }} in stock
+                                            </p>
+                                        @else
+                                            <p class="stock out-of-stock">
+                                                Out of stock
+                                            </p>
+                                        @endif
+                                    @endif
+
                                     <p>
                                         {{ $_product->get_description() }}
                                     </p>

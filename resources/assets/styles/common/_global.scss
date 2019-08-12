@@ -19,6 +19,14 @@ body {
         transition-duration: .3s;
     }
 
+    .stock.out-of-stock {
+        color: red;
+    }
+
+    .stock.in-stock {
+        color: #77a464;
+    }
+
     .lrm-form {
         input {
             border-radius: 0px !important;
