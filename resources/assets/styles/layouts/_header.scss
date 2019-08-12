@@ -8,10 +8,66 @@
 
         li {
             display: inline-block;
+            position: relative;
 
             &:last-child a {
                 border: none;
             }
+
+            .dropdown.active .submenu {
+                display: block;
+            }
+
+            .submenu {
+                background: #ffffff;
+                border-radius: 3px;
+                border: 1px solid #cccccc;
+                box-shadow: 0 0 30px rgba(7,51,84,0.17);
+                display: none;
+                margin-top: 15px;
+                min-width: 200px;
+                padding: 15px;
+                position: absolute;
+                text-align: center;
+                z-index: 9999;
+                right: 0;
+                transition-duration: .3s;
+
+                li {
+                    display: block;
+
+                    a {
+                        color: #7e7e7e;
+                        display: block;
+                        padding: 10px 0;
+                    }
+                }
+            }
+
+            .submenu:after, .submenu:before {
+                bottom: 100%;
+                right: 10%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+
+            .submenu:after {
+                border-color: rgba(255, 255, 255, 0);
+                border-bottom-color: #ffffff;
+                border-width: 10px;
+                margin-left: -10px;
+            }
+            .submenu:before {
+                border-color: rgba(204, 204, 204, 0);
+                border-bottom-color: #cccccc;
+                border-width: 11px;
+                margin-left: -11px;
+            }
+
 
             a {
                 border-right: 1px solid #ffffff;

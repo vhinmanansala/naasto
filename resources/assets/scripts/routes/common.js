@@ -11,6 +11,18 @@ export default {
             height: 'toggle',
         }, 500);
     });
+
+    const $menu = $('.dropdown');
+
+    $(document).mouseup(e => {
+        if (!$menu.is(e.target)  && $menu.has(e.target).length === 0) {
+            $menu.removeClass('active');
+        }
+     });
+
+    $('.user').on('click', () => {
+        $menu.toggleClass('active');
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
