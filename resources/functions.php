@@ -136,12 +136,77 @@ function logout_redirect() {
 }
 
 function mailtrap($phpmailer) {
-  $phpmailer->isSMTP();
-  $phpmailer->Host = 'smtp.mailtrap.io';
-  $phpmailer->SMTPAuth = true;
-  $phpmailer->Port = 2525;
-  $phpmailer->Username = '13d68fd65b1f71';
-  $phpmailer->Password = 'd512cb2b291aa4';
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'smtp.mailtrap.io';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 2525;
+    $phpmailer->Username = '13d68fd65b1f71';
+    $phpmailer->Password = 'd512cb2b291aa4';
 }
 
 add_action('phpmailer_init', 'mailtrap');
+
+add_filter('woocommerce_account_menu_items', 'naasto_remove_my_account_links');
+
+function naasto_remove_my_account_links($menu_links) {
+    unset($menu_links['payment-methods']);
+
+    return $menu_links;
+}
+
+function my_delete_user($user_id) {
+    global $wpdb;
+    $email = $wpdb->get_var("SELECT user_email FROM $wpdb->users WHERE ID = '" . $user_id . "' LIMIT 1");
+
+     $headers = 'From: ' . get_bloginfo("name") . ' <' . get_bloginfo("admin_email") . '>' . "\r\n";
+     wp_mail($email, 'Your account has been deleted', 'Your account at ' . get_bloginfo("name") . ' has been deleted by the administrator', $headers);
+}
+add_action( 'delete_user', 'my_delete_user');
+
+/*
+ * Create a column. And maybe remove some of the default ones
+ * @param array $columns Array of all user table columns {column ID} => {column Name} 
+ */
+add_filter( 'manage_users_columns', 'rudr_modify_user_table' );
+ 
+function rudr_modify_user_table( $columns ) {
+ 
+    // unset( $columns['posts'] ); // maybe you would like to remove default columns
+    $columns['registration_date'] = 'Registration date'; // add new
+ 
+    return $columns;
+ 
+}
+ 
+/*
+ * Fill our new column with the registration dates of the users
+ * @param string $row_output text/HTML output of a table cell
+ * @param string $column_id_attr column ID
+ * @param int $user user ID (in fact - table row ID)
+ */
+add_filter( 'manage_users_custom_column', 'rudr_modify_user_table_row', 10, 3 );
+ 
+function rudr_modify_user_table_row( $row_output, $column_id_attr, $user ) {
+ 
+    $date_format = 'j M, Y H:i';
+ 
+    switch ( $column_id_attr ) {
+        case 'registration_date' :
+            return date( $date_format, strtotime( get_the_author_meta( 'registered', $user ) ) );
+            break;
+        default:
+    }
+ 
+    return $row_output;
+ 
+}
+ 
+/*
+ * Make our "Registration date" column sortable
+ * @param array $columns Array of all user sortable columns {column ID} => {orderby GET-param} 
+ */
+add_filter( 'manage_users_sortable_columns', 'rudr_make_registered_column_sortable' );
+ 
+function rudr_make_registered_column_sortable( $columns ) {
+    return wp_parse_args( array( 'registration_date' => 'registered' ), $columns );
+}

@@ -38,6 +38,14 @@
                     </div>
                 </div>
             @endif
+
+            <div class="grid-x grid-padding-x justified-center" id="footer-menu-container">
+                <div class="cell mediu-8 large-8">
+                    <?php   
+                        wp_nav_menu(array('menu' => 'Footer Menu', 'menu_class' => 'clearfix', 'container' => false));
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

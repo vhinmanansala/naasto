@@ -5,6 +5,21 @@
         color: #ffffff;
     }
 
+    #footer-menu-container {
+        padding-top: 60px;
+
+        ul {
+            display: inline-block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            a:hover {
+                color: #7e7e7e;
+            }
+        }
+    }
+
     .social-media {
         display: inline-block;
         margin: 0;

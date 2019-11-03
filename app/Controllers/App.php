@@ -89,4 +89,14 @@ class App extends Controller
             'hide_empty' => false,
         ]);
     }
+
+    public function redirection_page_link()
+    {
+        return get_field('redirection_page_link', 'option');
+    }
+
+    public function redirection_page_button_text()
+    {
+        return get_field('redirection_page_button_text', 'option');
+    }
 }

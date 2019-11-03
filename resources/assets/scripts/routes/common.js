@@ -23,6 +23,12 @@ export default {
     $('.user').on('click', () => {
         $menu.toggleClass('active');
     });
+
+    $(document.body).on('checkout_error', function () {
+        $('html, body').animate({
+            scrollTop: ($('form.checkout').offset().top - 400),
+        }, 1000);
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

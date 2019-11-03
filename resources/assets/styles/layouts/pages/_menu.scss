@@ -30,6 +30,10 @@ body.tax-product_cat {
                 display: inline;
                 border-right: 1px solid #717487;
 
+                &:last-child {
+                    border: none;
+                }
+
                 @include breakpoint(medium only) {
                     &:first-child a {
                         margin-left: 0;

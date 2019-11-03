@@ -1,4 +1,14 @@
+#header-section-container {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
 #secondary-menu-container {
+    background: #171a1c;
     padding: 15px 0;
 
     ul {
