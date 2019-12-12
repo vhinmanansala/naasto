@@ -150,6 +150,7 @@ add_filter('woocommerce_account_menu_items', 'naasto_remove_my_account_links');
 
 function naasto_remove_my_account_links($menu_links) {
     unset($menu_links['payment-methods']);
+    unset($menu_links['dashboard']);
 
     return $menu_links;
 }

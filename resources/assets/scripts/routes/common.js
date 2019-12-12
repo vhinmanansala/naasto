@@ -29,6 +29,8 @@ export default {
             scrollTop: ($('form.checkout').offset().top - 400),
         }, 1000);
     });
+
+   $('.lrm-form .fieldset.fieldset--submit button:contains("Create account")').text('Request account');
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

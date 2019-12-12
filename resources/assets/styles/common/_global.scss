@@ -30,6 +30,10 @@ body {
         padding-top: 189px;
     }
 
+    @include breakpoint(medium) {
+        padding-top: 134px;
+    }
+
     p, li, span, label, input, a, textarea, .button, table, input {
         color: #7e7e7e;
         font-family: 'Open Sans', sans-serif !important;

@@ -10,6 +10,10 @@ body.page-cart {
             float: right;
         }
     }
+
+    .woocommerce-shipping-totals.shipping .woocommerce-shipping-destination {
+        display: none;
+    }
 }
 
 @include breakpoint(portrait small) {

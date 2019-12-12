@@ -106,7 +106,11 @@
         font-size: 30px;
     }
 
-    ul#menu-main-menu {
+    ul#secondary-menu-list li:last-child a {
+        padding-right: 0;
+    }
+
+    ul#menu-main-menu, ul#secondary-menu-list {
         display: inline-block;
         list-style: none;
         margin: 0;
@@ -114,10 +118,6 @@
 
         li {
             display: inline-block;
-
-            &:last-child a {
-                padding-right: 0;
-            }
 
             a {
                 display: block;
