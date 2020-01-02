@@ -9,6 +9,10 @@ body.page-checkout {
         box-shadow: none;
     }
 
+    .woocommerce-shipping-totals.shipping {
+        display: none;
+    }
+
     #shipping-container {
         #order_comments {
             height: 200px !important;

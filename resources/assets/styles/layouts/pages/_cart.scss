@@ -11,7 +11,8 @@ body.page-cart {
         }
     }
 
-    .woocommerce-shipping-totals.shipping .woocommerce-shipping-destination {
+    .woocommerce-shipping-totals.shipping .woocommerce-shipping-destination,
+    .woocommerce-shipping-totals.shipping {
         display: none;
     }
 }
