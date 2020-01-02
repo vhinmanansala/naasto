@@ -9,7 +9,7 @@
 
                     <li>
                         @if (! is_user_logged_in())
-                           <a href="#" class="lrm-login lrm-hide-if-logged-in">Account</a>
+                           <a href="#" class="woo-login-popup-sc-open">Account</a>
                         @else
                             <div class="dropdown">
                                 <a href="#" class="user">Hello {{ wp_get_current_user()->user_nicename }}</a>

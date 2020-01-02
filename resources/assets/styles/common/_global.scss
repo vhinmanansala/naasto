@@ -40,6 +40,10 @@ body {
         transition-duration: .3s;
     }
 
+    .woo-login-popup-sc-modal .woocommerce-Input {
+        font-size: 12px !important;
+        font-weight: normal !important;
+    }
 
     .stock.out-of-stock {
         color: red;

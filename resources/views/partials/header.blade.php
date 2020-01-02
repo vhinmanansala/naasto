@@ -24,7 +24,7 @@
 
                         @if (! is_user_logged_in())
                             <li>
-                                <a href="#" class="lrm-login lrm-hide-if-logged-in">Login</a>
+                                <a href="#" class="woo-login-popup-sc-open">Login</a>
                             </li>
                         @else
                             <li>
