@@ -16,17 +16,18 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Open+Sans&display=swap', false, null);
     wp_enqueue_style('fontawesome', 'https://pro.fontawesome.com/releases/v5.9.0/css/all.css', [], null);
-    
+
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 }, 100);
 
+
 function add_font_awesome_sri($html, $handle) {
     if ($handle === 'fontawesome') {
         $html = str_replace(' />', ' integrity="sha384-vlOMx0hKjUCl4WzuhIhSNZSm2yQCaf0mOU1hEDK/iztH3gU4v5NMmJln9273A6Jz" crossorigin="anonymous" />', $html);
     }
- 
+
     return $html;
 }
 
@@ -94,13 +95,13 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
-    ] + $config);
+            'name'          => __('Primary', 'sage'),
+            'id'            => 'sidebar-primary'
+        ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
-    ] + $config);
+            'name'          => __('Footer', 'sage'),
+            'id'            => 'sidebar-footer'
+        ] + $config);
 });
 
 /**

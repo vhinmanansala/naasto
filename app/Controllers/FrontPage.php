@@ -105,4 +105,9 @@ class FrontPage extends Controller
     {
         return get_field('about_background');
     }
+
+    public function banner_heading_font_type()
+    {
+        return get_field('banner_heading_font_type');
+    }
 }

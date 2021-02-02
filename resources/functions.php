@@ -135,7 +135,7 @@ function logout_redirect() {
     exit;
 }
 
-function mailtrap($phpmailer) {
+/*function mailtrap($phpmailer) {
   $phpmailer->isSMTP();
   $phpmailer->Host = 'smtp.mailtrap.io';
   $phpmailer->SMTPAuth = true;
@@ -144,4 +144,17 @@ function mailtrap($phpmailer) {
   $phpmailer->Password = 'd512cb2b291aa4';
 }
 
-add_action('phpmailer_init', 'mailtrap');
+add_action('phpmailer_init', 'mailtrap');*/
+
+add_filter( 'http_request_args', 'widget_disable_update', 10, 2 );
+
+function widget_disable_update( $r, $url ) {
+    if ( 0 === strpos( $url, 'https://api.wordpress.org/plugins/update-check/' ) ) {
+        $my_plugin = plugin_basename( __FILE__ );
+        $plugins = json_decode( $r['body']['plugins'], true );
+        unset( $plugins['plugins'][$my_plugin] );
+        unset( $plugins['active'][array_search( $my_plugin, $plugins['active'] )] );
+        $r['body']['plugins'] = json_encode( $plugins );
+    }
+    return $r;
+}

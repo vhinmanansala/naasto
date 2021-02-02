@@ -4,6 +4,8 @@
             <div class="cell large-7 text-center">
                 <h2>{{ $menu_heading }}</h2>
                 <p>{{ $menu_sub_heading }}</p>
+
+
             </div>
         </div>
 
@@ -27,7 +29,7 @@
                                             {{ $_product->get_name() }}
                                         </a>
                                     </h5>
-                                    
+
                                     {!! wc_price($_product->get_price()) !!}
 
                                     @if ($_product->manage_stock)
