@@ -1,0 +1,12 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <option name="AUTODETECT_INDENTS" value="false" />
+    <JSCodeStyleSettings version="0">
+      <option name="USE_DOUBLE_QUOTES" value="false" />
+      <option name="FORCE_QUOTE_STYlE" value="true" />
+    </JSCodeStyleSettings>
+    <PHPCodeStyleSettings>
+      <option name="ALIGN_KEY_VALUE_PAIRS" value="true" />
+    </PHPCodeStyleSettings>
+  </code_scheme>
+</component>
