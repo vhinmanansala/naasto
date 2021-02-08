@@ -110,4 +110,19 @@ class FrontPage extends Controller
     {
         return get_field('banner_heading_font_type');
     }
+
+    public function banner_heading_font_size()
+    {
+        return get_field('banner_heading_font_size');
+    }
+
+    public function banner_heading_margin_bottom()
+    {
+        return get_field('banner_heading_margin_bottom');
+    }
+
+    public function banner_heading_font_color()
+    {
+        return get_field('banner_heading_font_color');
+    }
 }
