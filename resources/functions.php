@@ -158,3 +158,22 @@ function widget_disable_update( $r, $url ) {
     }
     return $r;
 }
+
+function stock_info_error( $message ){
+    global $woocommerce;
+
+    foreach ($woocommerce->cart->cart_contents as $item) {
+        $product_id =  $item['product_id'];
+        $product = wc_get_product( $product_id );
+
+        if ($item['quantity'] > $product->get_stock_quantity()){
+            $name = $product->get_name();
+
+            $message = "Sorry, but it seems like another user just bought some “{$name}” and we do not  have enough in stock to fulfill your order. This has been popular product  and our sincere apologies for any inconvenience caused.";
+
+            return $message;
+        }
+    }
+}
+
+add_filter( 'woocommerce_add_error', 'stock_info_error', 10, 1 );
