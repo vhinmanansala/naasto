@@ -135,7 +135,7 @@ function logout_redirect() {
     exit;
 }
 
-/*function mailtrap($phpmailer) {
+function mailtrap($phpmailer) {
   $phpmailer->isSMTP();
   $phpmailer->Host = 'smtp.mailtrap.io';
   $phpmailer->SMTPAuth = true;
@@ -144,7 +144,7 @@ function logout_redirect() {
   $phpmailer->Password = 'd512cb2b291aa4';
 }
 
-add_action('phpmailer_init', 'mailtrap');*/
+add_action('phpmailer_init', 'mailtrap');
 
 add_filter( 'http_request_args', 'widget_disable_update', 10, 2 );
 
@@ -169,7 +169,9 @@ function stock_info_error( $message ){
         if ($item['quantity'] > $product->get_stock_quantity()){
             $name = $product->get_name();
 
-            $message = "Sorry, but it seems like another user just bought some “{$name}” and we do not  have enough in stock to fulfill your order. This has been popular product  and our sincere apologies for any inconvenience caused.";
+            $quantity = $product->get_stock_quantity();
+
+            $message = "Sorry, but it seems like another user just bought some “{$name}” and we do not  have enough in stock to fulfill your order (only {$quantity} available). This has been popular product  and our sincere apologies for any inconvenience caused.";
 
             return $message;
         }
