@@ -108,7 +108,7 @@ function trunc($phrase, $max_words) {
     $phrase = strip_tags($phrase);
     $phrase_array = explode(' ',$phrase);
     if(count($phrase_array) > $max_words && $max_words > 0)
-      $phrase = implode(' ',array_slice($phrase_array, 0, $max_words));
+        $phrase = implode(' ',array_slice($phrase_array, 0, $max_words));
     return $phrase;
 }
 
@@ -136,12 +136,12 @@ function logout_redirect() {
 }
 
 function mailtrap($phpmailer) {
-  $phpmailer->isSMTP();
-  $phpmailer->Host = 'smtp.mailtrap.io';
-  $phpmailer->SMTPAuth = true;
-  $phpmailer->Port = 2525;
-  $phpmailer->Username = '13d68fd65b1f71';
-  $phpmailer->Password = 'd512cb2b291aa4';
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'smtp.mailtrap.io';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 2525;
+    $phpmailer->Username = '13d68fd65b1f71';
+    $phpmailer->Password = 'd512cb2b291aa4';
 }
 
 add_action('phpmailer_init', 'mailtrap');
@@ -176,6 +176,8 @@ function stock_info_error( $message ){
             return $message;
         }
     }
+
+    return $message;
 }
 
 add_filter( 'woocommerce_add_error', 'stock_info_error', 10, 1 );
