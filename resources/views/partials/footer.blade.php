@@ -15,19 +15,25 @@
                         @php($class = 'twitter')
                     @elseif ($social_media == 'pinterest')
                         @php($class = 'pinterest')
+                    @elseif ($social_media == 'instagram')
                     @endif
 
-                    <li>
-                        <a href="{{ $url }}" class="{{ $class }}">
-                            @if ($social_media == 'facebook')
-                                <i class="fab fa-facebook-f"></i>
-                            @elseif ($social_media == 'pinterest')
-                                <i class="fab fa-pinterest-p"></i>
-                            @elseif ($social_media == 'twitter')
-                                <i class="fab fa-twitter"></i>
-                            @endif
-                        </a>
-                    </li>
+
+                    @if ($url)
+                        <li>
+                            <a href="{{ $url }}" class="{{ $class }}">
+                                @if ($social_media == 'facebook')
+                                    <i class="fab fa-facebook-f"></i>
+                                @elseif ($social_media == 'pinterest')
+                                    <i class="fab fa-pinterest-p"></i>
+                                @elseif ($social_media == 'twitter')
+                                    <i class="fab fa-twitter"></i>
+                                @elseif ($social_media == 'instagram')
+                                    <i class="fab fa-instagram"></i>
+                                @endif
+                            </a>
+                        </li>
+                    @endif
                 @endforeach
             </ul>
 
